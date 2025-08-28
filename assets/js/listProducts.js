@@ -23,7 +23,6 @@ export async function listProducts(){
 
     data.map(item => {
         div.appendChild(Card(item))
-        div.appendChild(favorito)
     });
     return div;
 }
