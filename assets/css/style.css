@@ -1,0 +1,13 @@
+.cardList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+.card{
+
+    border:solid 1px;
+    flex: 0 1 calc((80% - 100px ) / 3);
+
+}
