@@ -1,17 +1,5 @@
-import { Card } from "./card.js";
-import { buscarTudo } from "../api.js"; 
-
-// export async function coisa(){
-//     let data = await buscarTudo()
-
-//     data.map(item => {
-//         // div.appendChild(Card(item))
-//     console.log(Card(item))
-//     });
-//     return 
-
-// }
-
+import { Card } from "./Card.js";
+import { buscarTudo } from "../assets/api.js"; 
 
 export async function listProducts(){
     let data = await buscarTudo()
