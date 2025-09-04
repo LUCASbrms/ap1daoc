@@ -1,3 +1,3 @@
-import { listProducts } from "./listProducts.js";
+import { listProducts } from "../../components/listProducts.js";
 
 document.body.appendChild(await listProducts())

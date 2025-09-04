@@ -1,5 +1,14 @@
-export async function buscarTudo(){
+// export async function buscarTudo(){
+//     const response = await fetch ("https://fakestoreapi.com/products")
+//     const data = await response.json()
+//     return data
+// }
+
+export async function buscarTudo(filtro){
     const response = await fetch ("https://fakestoreapi.com/products")
     const data = await response.json()
-    return data
+    const dataFiltrado = data.filter(item =>
+        item.title.includes(filtro)
+    )
+    return dataFiltrado
 }
