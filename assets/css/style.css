@@ -1,16 +1,4 @@
-.cardList{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px;
 
-}
-.card{
-
-    border:solid 1px;
-    flex: 0 1 calc((80% - 100px ) / 3);
-
-}
 
 
 body {
@@ -81,4 +69,43 @@ nav button {
   background: #1e1e1e;
   color: #fff;
   border-color: #444;
+}
+
+/* botão de pesquisar */
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.search-box button {
+  border: none;
+  background: #333333b1; /* cor do botão */
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background: #3333337a; /* hover */
+}
+
+.search-box button img {
+  width: 15px;
+  filter: invert(1); /* deixa o ícone branco (se for preto) */
 }

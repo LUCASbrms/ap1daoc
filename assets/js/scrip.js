@@ -13,7 +13,7 @@ app.appendChild(main);
 async function renderProdutos() {
   main.innerHTML = "<p>Carregando...</p>";
   main.innerHTML = "";
-  main.appendChild(await listProducts());
+  main.appendChild(await listProducts(""));
 }
 
 function renderFavoritos() {
@@ -25,6 +25,7 @@ function renderFavoritos() {
 document.addEventListener("click", async (e) => {
   if (e.target.id === "btnProdutos") renderProdutos();
   if (e.target.id === "btnFavoritos") renderFavoritos();
+  if (e.target.id === "btnPesquisar") pesquisar();
 
   if (e.target.id === "btnClaro") {
   document.body.style.background = "#fff";
@@ -55,5 +56,17 @@ const tema = localStorage.getItem("tema");
 if (tema === "escuro") {
   document.body.style.background = "#121212";
   document.body.style.color = "#fff";
+}
+
+// filtro por nome
+const inputProcurar = document.querySelector("#pesquisar")
+const btnPesquisar = document.querySelector("#btnPesquisar")
+
+
+async function pesquisar(){
+    const pesquisa = inputProcurar.value
+    main.innerHTML = "<p>Carregando...</p>";
+    main.innerHTML = "";
+    main.appendChild(await listProducts(pesquisa));
 }
 
