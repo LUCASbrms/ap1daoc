@@ -20,7 +20,7 @@ function renderFavoritos() {
   main.innerHTML = "";
   main.appendChild(Favoritos());
 }
-
+renderProdutos();
 // Eventos SPA
 document.addEventListener("click", async (e) => {
   if (e.target.id === "btnProdutos") renderProdutos();
